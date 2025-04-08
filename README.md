@@ -1,6 +1,6 @@
 👋 Hi, I’m @dineshpalsingh1989
 
-A passionate engineer with a deep background in vibration analysis, predictive maintenance, and condition monitoring. I’ve helped industries across Malaysia level up their reliability game—partnering with big names like SKF, Wilcoxon, Erbessd Instruments, and Viking Analytics. Over the past 4 years, I’ve led RM1.4 million+ in sales of high-end condition monitoring tools.
+
 
 👀 I’m interested in...
 
