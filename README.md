@@ -40,10 +40,3 @@ GitHub: @dineshpalsingh1989
 
 (Feel free to add email, LinkedIn, or other contact links here)
 
-😄 Pronouns:
-
-He/Him
-
-⚡ Fun fact:
-
-I’ve balanced blowers, aligned pumps, serviced vacuum systems, and even trained others on high-tech vibration tools—all while coding sensor dashboards from scratch. I bring hands-on field experience and technical skills to the same table.
