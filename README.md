@@ -1,42 +1,52 @@
-👋 Hi, I’m @dineshpalsingh1989
+👋 Hi, I’m Dineshpal Singh (@dineshpalsingh1989)
 
+🔧 Industrial IoT | Condition Monitoring | Predictive Maintenance
 
+I design and deploy end-to-end IoT systems for rotating equipment monitoring, turning raw sensor data into actionable insights through dashboards, alerts, and analytics.
 
-👀 I’m interested in...
+👀 Interests & Focus Areas
 
-Building IoT systems for rotating equipment monitoring
+🏭 IoT systems for rotating equipment & machine health
 
-ESP32, LoRa, BLE, and CircuitPython development
+📡 ESP32 (ESP32-C3), LoRa, BLE, CircuitPython
 
-Modbus, MQTT, Node-RED, Google Cloud, and secure data transmission
+🔄 Modbus, MQTT, Node-RED, secure data pipelines
 
-Making predictive maintenance smarter with AI and analytics
+☁️ Cloud integration (Google Cloud, HiveMQ, Adafruit IO)
 
-Exploring custom dashboards and remote sensor control systems
+📊 Custom dashboards, real-time visualization & remote control
 
-🌱 I’m currently learning...
+🤖 Predictive maintenance using analytics & AI
 
-WIZnet W5500 Ethernet + SSL for secure cloud communication
+🌱 Currently Learning & Expanding
 
-Secure integration with HiveMQ and Adafruit IO
+🔐 WIZnet W5500 Ethernet + SSL/TLS for secure cloud communication
 
-Building compact, low-power ESP32-C3 sensor nodes with BLE
+🔑 Secure MQTT integration with HiveMQ & Adafruit IO
 
-Real-time data visualization using Dash, InfluxDB, and Plotly
+⚡ Low-power ESP32-C3 sensor nodes with BLE
 
- I’m looking to collaborate on...
+📈 Real-time data visualization using Dash, InfluxDB & Plotly
 
-Predictive maintenance projects
+🧠 Edge processing concepts for vibration and condition data
 
-Smart sensor solutions for industrial use
+🤝 Open to Collaboration On
 
-Edge AI systems for vibration pattern recognition
+🛠️ Predictive maintenance & condition monitoring projects
 
-Anything related to sensor integration, cloud, or reliability tech
+📟 Smart industrial sensor solutions
 
-📫 How to reach me
+🧠 Edge AI for vibration pattern recognition
 
-GitHub: @dineshpalsingh1989
+☁️ Scalable IIoT dashboards & alerting systems
 
-(Feel free to add email, LinkedIn, or other contact links here)
+🧰 Tech Stack Snapshot
 
+Hardware: ESP32 / ESP32-C3, LoRa, BLE, Industrial Sensors
+Protocols: MQTT, Modbus RTU/TCP, HTTP, BLE
+Cloud & Tools: Node-RED, Google Cloud, HiveMQ, InfluxDB
+Visualization: Streamlit, Dash, Plotly
+Alerts: Telegram Bot, automated reporting
+
+📫 Let’s connect & build reliable industrial systems
+If you’re working on machine health, vibration monitoring, or IIoT, feel free to reach out.
