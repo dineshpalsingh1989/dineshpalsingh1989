@@ -30,12 +30,91 @@ I design and deploy end-to-end **Industrial IoT (IIoT)** systems specifically fo
 
 ### 🌱 Currently Exploring
 
-* 🔐 **Secure Edge Comms:** Implementing SSL/TLS on WIZnet W5500 & ESP32-C3.
-* ⚡ **Low-Power Design:** Optimizing battery-operated sensor nodes using BLE deep sleep.
-* 🧠 **Edge AI:** Running lightweight vibration analysis models directly on the microcontroller.
+* 🔐 **Secure Edge & Broker Comms:** TLS-secured MQTT deployments (ESP32 ↔ mqtt.com.my ↔ Cloud).
+* 🗄️ **Industrial Data Modeling:** Long-term vibration and condition data storage using SQL & InfluxDB.
+* 🔥 **Hybrid Dashboards:** Combining Firebase real-time views with SQL-based historical analytics.
+*🔥 **Google Cloud & Firebase:**  
+End-to-end IIoT cloud backend leveraging
+ **Firebase** and **Google Cloud Platform (GCP)** for real-time data ingestion, secure device authentication, and scalable analytics.  
+Includes **Firebase Realtime Database / Firestore** for live sensor streaming, **Google Cloud Storage** for long-term vibration waveform and FFT data archiving, and **Cloud Functions** for automated processing, alerts, and system orchestration — enabling fast prototyping that seamlessly scales to industrial production deployments.
+
 
 ---
 
+🌐 **Platforms:**  
+![MQTT](https://img.shields.io/badge/MQTT-Broker-blue?style=flat&logo=eclipse-mosquitto&logoColor=white)  
+**mqtt.com.my** – MQTT Broker & Industrial IIoT Messaging Platform  
+
+🗄️ **Databases:**  
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)
+![InfluxDB](https://img.shields.io/badge/InfluxDB-22ADF6?style=flat&logo=influxdb&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)  
+
+SQL (MySQL / PostgreSQL), InfluxDB, Firebase  
+
+🚨 **Alerts & Automation:**  
+![Telegram](https://img.shields.io/badge/Telegram-Bot-26A5E4?style=flat&logo=telegram&logoColor=white)
+![Automation](https://img.shields.io/badge/Automation-Reports-green?style=flat)  
+
+Telegram Bot alerts, automated reports, threshold-based alarms
+
+
+---
+🔧 **Hardware:**  
+![ESP32](https://img.shields.io/badge/ESP32-ESP32%2FC3-E7352C?style=flat&logo=espressif&logoColor=white)
+![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi-Edge-C51A4A?style=flat&logo=raspberry-pi&logoColor=white)
+![LoRa](https://img.shields.io/badge/LoRa-Long_Range-0091BD?style=flat&logo=lora&logoColor=white)
+![BLE](https://img.shields.io/badge/BLE-Bluetooth-0082FC?style=flat&logo=bluetooth&logoColor=white)
+![Sensors](https://img.shields.io/badge/Industrial-Sensors-green?style=flat)  
+
+ESP32 / ESP32-C3, **Raspberry Pi**, LoRa, BLE, Industrial Sensors  
+
+📡 **Protocols & Communication:**  
+![MQTT](https://img.shields.io/badge/MQTT-Eclipse-blue?style=flat&logo=eclipse-mosquitto&logoColor=white)
+![Modbus](https://img.shields.io/badge/Modbus-RTU%2FTCP-orange?style=flat)
+![HTTP](https://img.shields.io/badge/HTTP-REST-lightgrey?style=flat)
+![BLE](https://img.shields.io/badge/BLE-Bluetooth-0082FC?style=flat&logo=bluetooth&logoColor=white)  
+
+MQTT, Modbus RTU/TCP, HTTP, BLE  
+
+☁️ **Cloud & Tools:**  
+![Node-RED](https://img.shields.io/badge/Node--RED-Flow--Based-8F0000?style=flat&logo=nodered&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-GCP-4285F4?style=flat&logo=google-cloud&logoColor=white)
+![HiveMQ](https://img.shields.io/badge/HiveMQ-MQTT-F39C12?style=flat&logo=hivemq&logoColor=white)
+![InfluxDB](https://img.shields.io/badge/InfluxDB-TimeSeries-22ADF6?style=flat&logo=influxdb&logoColor=white)  
+
+Node-RED, Google Cloud, HiveMQ, InfluxDB  
+
+📊 **Visualization & Dashboards:**  
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboards-FF4B4B?style=flat&logo=streamlit&logoColor=white)
+![Dash](https://img.shields.io/badge/Dash-Plotly-0081CB?style=flat&logo=plotly&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-Interactive-3F4F75?style=flat&logo=plotly&logoColor=white)  
+
+Streamlit, Dash, Plotly  
+
+🚨 **Alerts & Reporting:**  
+![Telegram](https://img.shields.io/badge/Telegram-Bot-26A5E4?style=flat&logo=telegram&logoColor=white)
+![Reports](https://img.shields.io/badge/Automated-Reports-green?style=flat)  
+
+Telegram Bot alerts, automated reporting
+
+---
+🌐 **Live IIoT Dashboards & Proof-of-Concepts**
+
+🔧 **Industrial Monitoring Dashboard**  
+![Dashboard](https://img.shields.io/badge/Live-Dashboard-0081CB?style=flat&logo=plotly&logoColor=white)
+![IIoT](https://img.shields.io/badge/IIoT-Monitoring-green?style=flat)
+![Status](https://img.shields.io/badge/Status-Online-brightgreen?style=flat)  
+🔗 http://176.97.117.59/
+
+📊 **Real-Time Analytics & Visualization App**  
+![Streamlit](https://img.shields.io/badge/Streamlit-Live_App-FF4B4B?style=flat&logo=streamlit&logoColor=white)
+![Realtime](https://img.shields.io/badge/Realtime-Data-blue?style=flat)
+![Cloud](https://img.shields.io/badge/Cloud-IIoT-4285F4?style=flat&logo=google-cloud&logoColor=white)  
+🔗 http://213.111.157.130:8050/
+
+---
 ### 🤝 Open to Collaboration
 
 I am actively looking to collaborate on projects involving:
@@ -47,11 +126,5 @@ I am actively looking to collaborate on projects involving:
 
 [**📫 Let’s connect & build reliable industrial systems!**](https://github.com/dineshpalsingh1989)
 
-Hardware: ESP32 / ESP32-C3, LoRa, BLE, Industrial Sensors
-Protocols: MQTT, Modbus RTU/TCP, HTTP, BLE
-Cloud & Tools: Node-RED, Google Cloud, HiveMQ, InfluxDB
-Visualization: Streamlit, Dash, Plotly
-Alerts: Telegram Bot, automated reporting
 
-📫 Let’s connect & build reliable industrial systems
-If you’re working on machine health, vibration monitoring, or IIoT, feel free to reach out.
+
