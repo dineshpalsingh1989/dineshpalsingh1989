@@ -112,7 +112,7 @@ Telegram Bot alerts, automated reporting
 ![Streamlit](https://img.shields.io/badge/Streamlit-Live_App-FF4B4B?style=flat&logo=streamlit&logoColor=white)
 ![Realtime](https://img.shields.io/badge/Realtime-Data-blue?style=flat)
 ![Cloud](https://img.shields.io/badge/Cloud-IIoT-4285F4?style=flat&logo=google-cloud&logoColor=white)  
-🔗 http://213.111.157.130:8050/
+🔗 http://213.111.157.130:8050/  or 213.111.157.130
 
 ---
 ### 🤝 Open to Collaboration
