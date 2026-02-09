@@ -11,10 +11,9 @@ I design and deploy end-to-end **Industrial IoT (IoT)** systems specifically for
 
 ### 👀 Focus Areas
 
-* 🏭 **Machine Health:** Systems for rotating equipment monitoring & diagnostics.
-* 📡 **Edge Hardware:** ESP32 (C3/S3), LoRa, BLE, and CircuitPython integration.
-* 🔄 **Data Pipelines:** Modbus RTU/TCP, Secure MQTT, and Node-RED flows.
-* 📊 **Visualization:** Custom, high-speed dashboards using Dash/Plotly & Streamlit.
+* 🏭 **Machine Health:** Rotating equipment monitoring & diagnostics with [![Wilcoxon 883M](https://img.shields.io/badge/Wilcoxon_883M-Sensor-4ABDAC?style=flat)](https://www.wilcoxon.com/product/883M) and [![VDS](https://img.shields.io/badge/VDS-Vibration_System-FF6F61?style=flat)](https://www.vds.com)  
+* 📡 **Edge Hardware & Sensors:** [![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat&logo=espressif&logoColor=white)](), [![ESP32-C3](https://img.shields.io/badge/ESP32-C3%2FS3-E7352C?style=flat&logo=espressif&logoColor=white)](), [![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi-C51A4A?style=flat&logo=raspberry-pi&logoColor=white)](), [![LoRa](https://img.shields.io/badge/LoRa-0091BD?style=flat&logo=lora&logoColor=white)](), [![BLE](https://img.shields.io/badge/BLE-0082FC?style=flat&logo=bluetooth&logoColor=white)](), [![Wilcoxon 883M](https://img.shields.io/badge/Wilcoxon_883M-Sensor-4ABDAC?style=flat)](https://www.wilcoxon.com/product/883M), [![VDS](https://img.shields.io/badge/VDS-Vibration_System-FF6F61?style=flat)](https://www.vds.com) 
+
 
 ---
 
