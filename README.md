@@ -27,109 +27,25 @@ I design and deploy end-to-end **Industrial IoT (IoT)** systems specifically for
 | ![Sensors](https://img.shields.io/badge/Sensors-Industrial-green?style=flat) **Vibration** | ![LoRaWAN](https://img.shields.io/badge/LoRaWAN-0091BD?style=flat&logo=lora&logoColor=white) **LoRa** | ![Node-RED](https://img.shields.io/badge/Node--RED-8F0000?style=flat&logo=nodered&logoColor=white) **Node-RED** | ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white) **Grafana** |
 
 ---
-🌱 Industrial IIoT Vibration Monitoring Platform
+🌱 Currently Exploring
 
-ESP32 (883M Wilcoxon) • MQTT • Firebase • Google Cloud
-Remote OTA • Real-Time Analytics
+🛡️ Secure Edge & Broker Comms: Deploying TLS-secured MQTT streams between ESP32-C3 and mqtt.com.my, ensuring enterprise-grade encrypted telemetry for sensitive industrial environments.
 
-🏗️ Architecture Diagram
-[ESP32 Nodes] 
-     │ MQTT / TLS
-     ▼
- [MQTT Broker]
-     │
- ┌───────────────┐     ┌──────────────────────┐
- │  Firebase     │     │ Google Cloud Storage │
- │ Realtime DB   │     │ / SQL / InfluxDB    │
- └───────────────┘     └──────────────────────┘
+📲 Remote Lifecycle Management (FOTA): Implementing Online Firmware-Over-The-Air updates for ESP32 nodes integrated with Wilcoxon 883M vibration sensors. This enables remote logic refinement and sensor recalibration without physical site access.
 
-🔐 Secure Edge & Broker Communication
+☁️ Google Cloud & Firebase IIoT:
 
-Architecture: ESP32 → TLS MQTT Broker → Cloud Backend
+⚡ Real-time Ingestion: Utilizing Firebase Realtime Database/Firestore for live streaming of high-frequency vibration data.
 
-🔒 TLS-encrypted MQTT communication
+📦 Cloud Archival: Leveraging Google Cloud Storage for long-term vibration waveform and FFT data archiving.
 
-🛡️ Certificate-based authentication
+⚙️ System Orchestration: Using Cloud Functions for automated processing, intelligent alerts, and seamless scaling from prototype to industrial production.
 
-📦 Secure payload transmission
+📊 Hybrid Dashboards & Automation:
 
-⚙️ Hardened edge configuration
+Architecting unified views combining Firebase (Real-time) with SQL/InfluxDB (Historical Analytics).
 
-🗄️ Industrial Data Modeling
-
-📊 InfluxDB – High-frequency vibration & FFT time-series
-
-💾 SQL (PostgreSQL / SQLite) – Asset & maintenance records
-
-⚡ Optimized schema for:
-
-📈 Trend analysis
-
-⚠️ Anomaly detection
-
-🔧 Predictive maintenance
-
-🔥 Hybrid Real-Time Dashboards
-
-📡 Firebase Realtime DB / Firestore – Live telemetry
-
-🗂 SQL-based historical analytics
-
-🖥 Python (Streamlit / Custom Web UI) dashboards
-
-⚡ MQTT-driven instant updates
-
-☁️ Google Cloud & Firebase Backend
-
-🔹 Firebase – Real-time sensor ingestion
-
-💽 Google Cloud Storage – Waveform & FFT archive
-
-⚙️ Cloud Functions – Automated processing & alerts
-
-🔑 IAM – Secure device identity management
-
-🚀 OTA Firmware Update System
-
-ESP32 (883M Wilcoxon Monitoring Node)
-
-Update Workflow:
-
-📡 Device checks firmware version (HTTPS / MQTT trigger)
-
-⬇️ Downloads firmware from GCS or Secure VPS
-
-✔️ Verifies SHA256 integrity
-
-🔄 Dual-partition OTA flash
-
-🔙 Automatic rollback on failure
-
-Security Features:
-
-🔒 TLS-secured firmware delivery
-
-✔️ Integrity verification
-
-🖋 Optional firmware signing
-
-🔄 Safe rollback mechanism
-
-📡 System Capabilities
-
-📡 Real-time vibration streaming
-
-📊 FFT data acquisition
-
-☁️ Cloud-based analytics
-
-🚨 Automated alerting
-
-🔐 Secure MQTT communication
-
-🔄 Remote OTA firmware management
-
-🏭 Scalable industrial deployment
+Integrating Telegram Bots for instant threshold notifications and Automated PDF/Excel Reporting generated via Python backends.
 ---
 
 🌐 **Platforms:**  
