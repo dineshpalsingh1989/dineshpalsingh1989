@@ -27,127 +27,109 @@ I design and deploy end-to-end **Industrial IoT (IoT)** systems specifically for
 | ![Sensors](https://img.shields.io/badge/Sensors-Industrial-green?style=flat) **Vibration** | ![LoRaWAN](https://img.shields.io/badge/LoRaWAN-0091BD?style=flat&logo=lora&logoColor=white) **LoRa** | ![Node-RED](https://img.shields.io/badge/Node--RED-8F0000?style=flat&logo=nodered&logoColor=white) **Node-RED** | ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white) **Grafana** |
 
 ---
-╔══════════════════════════════════════════════════════════════╗
-║        INDUSTRIAL IIOT VIBRATION MONITORING PLATFORM        ║
-║   ESP32 (883M Wilcoxon) • MQTT • Firebase • Google Cloud    ║
-║                 Remote OTA • Real-Time Analytics           ║
-╚══════════════════════════════════════════════════════════════╝
+🌱 Industrial IIoT Vibration Monitoring Platform
 
-┌──────────────────────────────────────────────────────────────┐
-│ 🏗️ ARCHITECTURE DIAGRAM                                      │
-├──────────────────────────────────────────────────────────────┤
-│                                                              │
-│   [ESP32 Nodes]                                              │
-│       │ MQTT/TLS                                             │
-│       ▼                                                      │
-│   [MQTT Broker]                                              │
-│       │                                                      │
-│   ┌───────────────┐     ┌───────────────────────────────┐   │
-│   │ Firebase      │     │ Google Cloud Storage / SQL    │   │
-│   │ Realtime DB   │     │ / InfluxDB                    │   │
-│   └───────────────┘     └───────────────────────────────┘   │
-│                                                              │
-└──────────────────────────────────────────────────────────────┘
+ESP32 (883M Wilcoxon) • MQTT • Firebase • Google Cloud
+Remote OTA • Real-Time Analytics
 
+🏗️ Architecture Diagram
+[ESP32 Nodes] 
+     │ MQTT / TLS
+     ▼
+ [MQTT Broker]
+     │
+ ┌───────────────┐     ┌──────────────────────┐
+ │  Firebase     │     │ Google Cloud Storage │
+ │ Realtime DB   │     │ / SQL / InfluxDB    │
+ └───────────────┘     └──────────────────────┘
 
-┌──────────────────────────────────────────────────────────────┐
-│ 🔐 SECURE EDGE & BROKER COMMUNICATION                       │
-├──────────────────────────────────────────────────────────────┤
-│ Architecture:                                               │
-│   ESP32 → TLS MQTT Broker → Cloud Backend                  │
-│                                                              │
-│ • TLS-encrypted MQTT communication                          │
-│ • Certificate-based authentication                          │
-│ • Secure payload transmission                               │
-│ • Hardened edge configuration                               │
-└──────────────────────────────────────────────────────────────┘
+🔐 Secure Edge & Broker Communication
 
+Architecture: ESP32 → TLS MQTT Broker → Cloud Backend
 
-┌──────────────────────────────────────────────────────────────┐
-│ 🗄️ INDUSTRIAL DATA MODELING                                 │
-├──────────────────────────────────────────────────────────────┤
-│ • InfluxDB – High-frequency vibration & FFT time-series    │
-│ • SQL (PostgreSQL / SQLite) – Asset & maintenance records  │
-│ • Optimized schema for:                                     │
-│     - Trend analysis                                        │
-│     - Anomaly detection                                     │
-│     - Predictive maintenance                                │
-└──────────────────────────────────────────────────────────────┘
+🔒 TLS-encrypted MQTT communication
 
+🛡️ Certificate-based authentication
 
-┌──────────────────────────────────────────────────────────────┐
-│ 🔥 HYBRID REAL-TIME DASHBOARDS                              │
-├──────────────────────────────────────────────────────────────┤
-│ • Firebase Realtime DB / Firestore – Live telemetry        │
-│ • SQL-based historical analytics                            │
-│ • Python (Streamlit / Custom Web UI) dashboards            │
-│ • MQTT-driven instant updates                               │
-└──────────────────────────────────────────────────────────────┘
+📦 Secure payload transmission
 
+⚙️ Hardened edge configuration
 
-┌──────────────────────────────────────────────────────────────┐
-│ ☁️ GOOGLE CLOUD & FIREBASE BACKEND                          │
-├──────────────────────────────────────────────────────────────┤
-│ • Firebase – Real-time sensor ingestion                     │
-│ • Google Cloud Storage – Waveform & FFT archive            │
-│ • Cloud Functions – Processing & alert automation          │
-│ • IAM – Secure device identity management                   │
-└──────────────────────────────────────────────────────────────┘
+🗄️ Industrial Data Modeling
 
+📊 InfluxDB – High-frequency vibration & FFT time-series
 
-┌──────────────────────────────────────────────────────────────┐
-│ 🚀 OTA FIRMWARE UPDATE SYSTEM                               │
-│    ESP32 (883M Wilcoxon Monitoring Node)                    │
-├──────────────────────────────────────────────────────────────┤
-│ Update Workflow:                                            │
-│ 1. Device checks firmware version (HTTPS / MQTT trigger)   │
-│ 2. Downloads firmware from GCS or Secure VPS               │
-│ 3. Verifies SHA256 integrity                                │
-│ 4. Dual-partition OTA flash                                 │
-│ 5. Automatic rollback on failure                            │
-│                                                              │
-│ Security Features:                                          │
-│ • TLS-secured firmware delivery                             │
-│ • Integrity verification                                    │
-│ • Optional firmware signing                                 │
-│ • Safe rollback mechanism                                   │
-└──────────────────────────────────────────────────────────────┘
+💾 SQL (PostgreSQL / SQLite) – Asset & maintenance records
 
+⚡ Optimized schema for:
 
-┌──────────────────────────────────────────────────────────────┐
-│ 📡 SYSTEM CAPABILITIES                                      │
-├──────────────────────────────────────────────────────────────┤
-│ • Real-time vibration streaming                             │
-│ • FFT data acquisition                                      │
-│ • Cloud-based analytics                                     │
-│ • Automated alerting                                        │
-│ • Secure MQTT communication                                 │
-│ • Remote OTA firmware management                            │
-│ • Scalable industrial deployment                            │
-└──────────────────────────────────────────────────────────────┘
+📈 Trend analysis
 
+⚠️ Anomaly detection
 
-┌──────────────────────────────────────────────────────────────┐
-│ ⚡ QUICK START GUIDE                                        │
-├──────────────────────────────────────────────────────────────┤
-│ 1️⃣ Clone the repo:                                         │
-│     git clone https://github.com/yourusername/iiot-vib.git  │
-│                                                              │
-│ 2️⃣ Install dependencies:                                   │
-│     • Python: pip install -r requirements.txt              │
-│     • MQTT Broker: Configure TLS certificates              │
-│     • Firebase / GCP: Setup projects & credentials         │
-│                                                              │
-│ 3️⃣ Flash ESP32 nodes:                                      │
-│     • Configure WiFi & MQTT settings                        │
-│     • Enable OTA via HTTPS / MQTT trigger                   │
-│                                                              │
-│ 4️⃣ Launch dashboards:                                      │
-│     • Streamlit / Web UI                                   │
-│     • Realtime telemetry via Firebase                       │
-│     • Historical analytics via SQL / InfluxDB               │
-└──────────────────────────────────────────────────────────────┘
+🔧 Predictive maintenance
 
+🔥 Hybrid Real-Time Dashboards
+
+📡 Firebase Realtime DB / Firestore – Live telemetry
+
+🗂 SQL-based historical analytics
+
+🖥 Python (Streamlit / Custom Web UI) dashboards
+
+⚡ MQTT-driven instant updates
+
+☁️ Google Cloud & Firebase Backend
+
+🔹 Firebase – Real-time sensor ingestion
+
+💽 Google Cloud Storage – Waveform & FFT archive
+
+⚙️ Cloud Functions – Automated processing & alerts
+
+🔑 IAM – Secure device identity management
+
+🚀 OTA Firmware Update System
+
+ESP32 (883M Wilcoxon Monitoring Node)
+
+Update Workflow:
+
+📡 Device checks firmware version (HTTPS / MQTT trigger)
+
+⬇️ Downloads firmware from GCS or Secure VPS
+
+✔️ Verifies SHA256 integrity
+
+🔄 Dual-partition OTA flash
+
+🔙 Automatic rollback on failure
+
+Security Features:
+
+🔒 TLS-secured firmware delivery
+
+✔️ Integrity verification
+
+🖋 Optional firmware signing
+
+🔄 Safe rollback mechanism
+
+📡 System Capabilities
+
+📡 Real-time vibration streaming
+
+📊 FFT data acquisition
+
+☁️ Cloud-based analytics
+
+🚨 Automated alerting
+
+🔐 Secure MQTT communication
+
+🔄 Remote OTA firmware management
+
+🏭 Scalable industrial deployment
 ---
 
 🌐 **Platforms:**  
