@@ -27,132 +27,86 @@ I design and deploy end-to-end **Industrial IoT (IoT)** systems specifically for
 | ![Sensors](https://img.shields.io/badge/Sensors-Industrial-green?style=flat) **Vibration** | ![LoRaWAN](https://img.shields.io/badge/LoRaWAN-0091BD?style=flat&logo=lora&logoColor=white) **LoRa** | ![Node-RED](https://img.shields.io/badge/Node--RED-8F0000?style=flat&logo=nodered&logoColor=white) **Node-RED** | ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white) **Grafana** |
 
 ---
+╔══════════════════════════════════════════════════════════════╗
+║        INDUSTRIAL IIOT VIBRATION MONITORING PLATFORM        ║
+║   ESP32 (883M Wilcoxon) • MQTT • Firebase • Google Cloud    ║
+╚══════════════════════════════════════════════════════════════╝
 
-🌱 Industrial IoT Vibration Monitoring Platform
+┌─────────────────────────────────────────────────────────────┐
+│ 🔐 SECURE EDGE & BROKER COMMUNICATION                      │
+├─────────────────────────────────────────────────────────────┤
+│ Architecture:                                               │
+│   ESP32 → TLS MQTT Broker → Cloud Backend                   │
+│                                                             │
+│ • TLS-encrypted MQTT communication                          │
+│ • Certificate-based authentication                          │
+│ • Secure payload transmission                               │
+│ • Hardened edge configuration                               │
+└──────────────────────────────────────────────────────────────┘
 
-ESP32 (883M Wilcoxon) + MQTT + Firebase + Google Cloud
 
-End-to-end Industrial IoT architecture for secure vibration monitoring, real-time analytics, and scalable cloud deployment.
+┌──────────────────────────────────────────────────────────────┐
+│ 🗄️ INDUSTRIAL DATA MODELING                                 │
+├──────────────────────────────────────────────────────────────┤
+│ • InfluxDB – High-frequency vibration & FFT time-series      │
+│ • SQL (PostgreSQL / SQLite) – Asset & maintenance records   │
+│ • Optimized schema for:                                     │
+│     - Trend analysis                                        │
+│     - Anomaly detection                                     │
+│     - Predictive maintenance                                │
+└──────────────────────────────────────────────────────────────┘
 
-🔐 Secure Edge & Broker Communication
 
-Architecture:
-ESP32 (Edge Node) → TLS MQTT Broker → Cloud Backend
+┌──────────────────────────────────────────────────────────────┐
+│ 🔥 HYBRID REAL-TIME DASHBOARDS                              │
+├──────────────────────────────────────────────────────────────┤
+│ • Firebase Realtime DB / Firestore – Live telemetry          │
+│ • SQL-based historical analytics                             │
+│ • Python (Streamlit / Custom Web UI) dashboards              │
+│ • MQTT-driven instant updates                                │
+└──────────────────────────────────────────────────────────────┘
 
-TLS-encrypted MQTT communication
 
-Certificate-based device authentication
+┌──────────────────────────────────────────────────────────────┐
+│ ☁️ GOOGLE CLOUD & FIREBASE BACKEND                          │
+├──────────────────────────────────────────────────────────────┤
+│ • Firebase – Real-time sensor ingestion                     │
+│ • Google Cloud Storage – Waveform & FFT archive            │
+│ • Cloud Functions – Processing & alert automation          │
+│ • IAM – Secure device identity management                   │
+└──────────────────────────────────────────────────────────────┘
 
-Secure payload transmission
 
-Hardened edge device configuration
+┌──────────────────────────────────────────────────────────────┐
+│ 🚀 OTA FIRMWARE UPDATE SYSTEM                               │
+│    ESP32 (883M Wilcoxon Monitoring Node)                     │
+├──────────────────────────────────────────────────────────────┤
+│ Update Workflow:                                            │
+│ 1. Device checks firmware version (HTTPS / MQTT trigger)    │
+│ 2. Downloads firmware from GCS or Secure VPS                │
+│ 3. Verifies SHA256 integrity                                │
+│ 4. Dual-partition OTA flash                                 │
+│ 5. Automatic rollback on failure                            │
+│                                                             │
+│ Security Features:                                          │
+│ • TLS-secured firmware delivery                             │
+│ • Integrity verification                                    │
+│ • Optional firmware signing                                 │
+│ • Safe rollback mechanism                                   │
+└──────────────────────────────────────────────────────────────┘
 
-Designed for industrial vibration monitoring environments.
 
-🗄️ Industrial Data Modeling
-
-Scalable long-term data storage architecture:
-
-InfluxDB – High-frequency vibration & FFT time-series data
-
-SQL (PostgreSQL / SQLite) – Structured asset & maintenance records
-
-Optimized schema for:
-
-Trend analysis
-
-Anomaly detection
-
-Predictive maintenance
-
-Supports both lightweight VPS deployment and enterprise infrastructure.
-
-🔥 Hybrid Real-Time Dashboards
-
-Integrated monitoring approach:
-
-Firebase Realtime Database / Firestore – Live telemetry streaming
-
-SQL Analytics Layer – Historical trend visualization
-
-Python (Streamlit / Custom Web UI) – Operator dashboard
-
-MQTT-driven instant updates
-
-Enables real-time machine visibility + long-term health insights.
-
-☁️ Google Cloud & Firebase Backend
-
-Cloud-native IIoT stack:
-
-Firebase – Real-time sensor ingestion
-
-Google Cloud Storage (GCS) – Waveform & FFT archive
-
-Cloud Functions – Automated processing & alerting
-
-IAM Authentication – Secure device identity management
-
-Built for rapid prototyping with seamless industrial scaling.
-
-🚀 OTA Firmware Update System
-ESP32 (883M Wilcoxon Monitoring Node)
-
-Secure Over-The-Air (OTA) firmware management for remote device updates.
-
-🔄 Update Workflow
-
-Device checks firmware version (HTTPS or MQTT trigger)
-
-Downloads firmware from:
-
-Google Cloud Storage
-
-Secure VPS HTTPS server
-
-Verifies integrity (SHA256 checksum)
-
-Applies update using dual-partition OTA
-
-Automatic rollback if update fails
-
-🔐 Security Features
-
-TLS-secured firmware download
-
-Firmware integrity validation
-
-Optional firmware signing
-
-Safe rollback mechanism
-
-🏭 Industrial Benefits
-
-Remote fleet firmware management
-
-No physical intervention required
-
-Reduced downtime
-
-Centralized version control
-
-Scalable device management
-
-📡 System Capabilities
-
-Real-time vibration streaming
-
-FFT data collection
-
-Cloud-based analytics
-
-Automated alerts
-
-Secure MQTT communication
-
-Remote OTA firmware updates
-
-Industrial-grade scalable architecture
+┌──────────────────────────────────────────────────────────────┐
+│ 📡 SYSTEM CAPABILITIES                                      │
+├──────────────────────────────────────────────────────────────┤
+│ • Real-time vibration streaming                             │
+│ • FFT data acquisition                                      │
+│ • Cloud-based analytics                                     │
+│ • Automated alerting                                        │
+│ • Secure MQTT communication                                 │
+│ • Remote OTA firmware management                            │
+│ • Scalable industrial deployment                            │
+└──────────────────────────────────────────────────────────────┘
 
 
 ---
