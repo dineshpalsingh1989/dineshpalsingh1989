@@ -5,7 +5,7 @@
 
 ### 🔧 Industrial IoT Specialist | Condition Monitoring | Predictive Maintenance
 
-I design and deploy end-to-end **Industrial IoT (IIoT)** systems specifically for monitoring rotating equipment. My work bridges the gap between raw sensor data and actionable maintenance insights, utilizing secure pipelines, real-time dashboards, and edge analytics.
+I design and deploy end-to-end **Industrial IoT (IoT)** systems specifically for monitoring rotating equipment. My work bridges the gap between raw sensor data and actionable maintenance insights, utilizing secure pipelines, real-time dashboards, and edge analytics.
 
 ---
 
@@ -28,15 +28,131 @@ I design and deploy end-to-end **Industrial IoT (IIoT)** systems specifically fo
 
 ---
 
-### 🌱 Currently Exploring
+🌱 Industrial IoT Vibration Monitoring Platform
 
-* 🔐 **Secure Edge & Broker Comms:** TLS-secured MQTT deployments (ESP32 ↔ mqtt.com.my ↔ Cloud).
-* 🗄️ **Industrial Data Modeling:** Long-term vibration and condition data storage using SQL & InfluxDB.
-* 🔥 **Hybrid Dashboards:** Combining Firebase real-time views with SQL-based historical analytics.
-*🔥 **Google Cloud & Firebase:**  
-End-to-end IIoT cloud backend leveraging
- **Firebase** and **Google Cloud Platform (GCP)** for real-time data ingestion, secure device authentication, and scalable analytics.  
-Includes **Firebase Realtime Database / Firestore** for live sensor streaming, **Google Cloud Storage** for long-term vibration waveform and FFT data archiving, and **Cloud Functions** for automated processing, alerts, and system orchestration — enabling fast prototyping that seamlessly scales to industrial production deployments.
+ESP32 (883M Wilcoxon) + MQTT + Firebase + Google Cloud
+
+End-to-end Industrial IoT architecture for secure vibration monitoring, real-time analytics, and scalable cloud deployment.
+
+🔐 Secure Edge & Broker Communication
+
+Architecture:
+ESP32 (Edge Node) → TLS MQTT Broker → Cloud Backend
+
+TLS-encrypted MQTT communication
+
+Certificate-based device authentication
+
+Secure payload transmission
+
+Hardened edge device configuration
+
+Designed for industrial vibration monitoring environments.
+
+🗄️ Industrial Data Modeling
+
+Scalable long-term data storage architecture:
+
+InfluxDB – High-frequency vibration & FFT time-series data
+
+SQL (PostgreSQL / SQLite) – Structured asset & maintenance records
+
+Optimized schema for:
+
+Trend analysis
+
+Anomaly detection
+
+Predictive maintenance
+
+Supports both lightweight VPS deployment and enterprise infrastructure.
+
+🔥 Hybrid Real-Time Dashboards
+
+Integrated monitoring approach:
+
+Firebase Realtime Database / Firestore – Live telemetry streaming
+
+SQL Analytics Layer – Historical trend visualization
+
+Python (Streamlit / Custom Web UI) – Operator dashboard
+
+MQTT-driven instant updates
+
+Enables real-time machine visibility + long-term health insights.
+
+☁️ Google Cloud & Firebase Backend
+
+Cloud-native IIoT stack:
+
+Firebase – Real-time sensor ingestion
+
+Google Cloud Storage (GCS) – Waveform & FFT archive
+
+Cloud Functions – Automated processing & alerting
+
+IAM Authentication – Secure device identity management
+
+Built for rapid prototyping with seamless industrial scaling.
+
+🚀 OTA Firmware Update System
+ESP32 (883M Wilcoxon Monitoring Node)
+
+Secure Over-The-Air (OTA) firmware management for remote device updates.
+
+🔄 Update Workflow
+
+Device checks firmware version (HTTPS or MQTT trigger)
+
+Downloads firmware from:
+
+Google Cloud Storage
+
+Secure VPS HTTPS server
+
+Verifies integrity (SHA256 checksum)
+
+Applies update using dual-partition OTA
+
+Automatic rollback if update fails
+
+🔐 Security Features
+
+TLS-secured firmware download
+
+Firmware integrity validation
+
+Optional firmware signing
+
+Safe rollback mechanism
+
+🏭 Industrial Benefits
+
+Remote fleet firmware management
+
+No physical intervention required
+
+Reduced downtime
+
+Centralized version control
+
+Scalable device management
+
+📡 System Capabilities
+
+Real-time vibration streaming
+
+FFT data collection
+
+Cloud-based analytics
+
+Automated alerts
+
+Secure MQTT communication
+
+Remote OTA firmware updates
+
+Industrial-grade scalable architecture
 
 
 ---
