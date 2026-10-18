@@ -5,13 +5,42 @@
 
 ### 🔧 Industrial IoT Specialist | Condition Monitoring | Predictive Maintenance
 
-I design and deploy end-to-end **Industrial IoT (IoT)** systems specifically for monitoring rotating equipment. My work bridges the gap between raw sensor data and actionable maintenance insights, utilizing secure pipelines, real-time dashboards, and edge analytics.
+I design and deploy end-to-end **Industrial IoT (IIoT)** systems specifically for monitoring rotating equipment. My work bridges the gap between raw sensor data and actionable maintenance insights, utilizing secure pipelines, real-time dashboards, and edge analytics.
 
 > *"Turning vibration into value."*
 
 ---
 
 ### 🚀 What I'm Building Now
+
+#### 📡 Milesight Dashboard V2.0
+
+A self-hosted **LoRaWAN and MQTT dashboard** for Milesight sensors and gateways, with **Firebase Firestore** storage and optional **Telegram + Gemini** sensor questions.
+
+- **Live monitoring:** device cards, history charts, CSV export, storage usage, and a workspace debug stream.
+- **Expanded sensor coverage:** 24 named device profiles, including 17 additions for leak detection, pulse metering, tank distance, water level, soil, pipe pressure, current, visitor counting, temperature, tilt, and weather. New profiles use gateway-decoded JSON.
+- **Two-way MQTT:** readings flow from sensors to the dashboard; owners can publish commands through the gateway's Embedded Network Server.
+- **Device controls:** hexadecimal/Base64 command previews, configurable workspace topics, FPort and confirmation options, UC300 DO1/DO2 presets, and command history. MQTT publication does not confirm sensor execution.
+- **Local demo:** 24 sample devices with charts, CSV downloads, settings, and simulated commands. No Firebase credentials or gateway needed.
+- **Deployment:** Docker or Node.js, workspace access controls, protected Firebase setup, and GitHub Actions checks.
+
+[**View project**](https://github.com/dineshpalsingh1989/milesight-dashboard) | [**Setup & sensor list**](https://github.com/dineshpalsingh1989/milesight-dashboard#readme) | [**Latest updates**](https://github.com/dineshpalsingh1989/milesight-dashboard/blob/main/CHANGELOG.md)
+
+![Milesight Dashboard architecture: sensor readings and MQTT commands](https://raw.githubusercontent.com/dineshpalsingh1989/milesight-dashboard/main/docs/architecture.svg)
+
+Try the demo after cloning the project and installing dependencies:
+
+```sh
+npm ci
+npm run demo
+```
+
+Open **http://localhost:8081**. Demo data and commands are simulated; physical gateway and sensor delivery remain unverified.
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
+![MQTT](https://img.shields.io/badge/MQTT-3C5280?style=flat&logo=eclipse-mosquitto&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 
 #### 🚦 IRIV Speed Console (Sensata AI Speed)
 A local-first speed-enforcement dashboard for the **Cytron IRIV PiControl CM5** and **Milesight TS4466 / TS8266** LPR cameras.
