@@ -71,6 +71,20 @@ A local-first speed-enforcement dashboard for the **Cytron IRIV PiControl CM5** 
 * 🏭 **Machine Health:** Rotating equipment monitoring & diagnostics with [![Wilcoxon 883M](https://img.shields.io/badge/Wilcoxon_883M-Sensor-4ABDAC?style=flat)](https://www.wilcoxon.com/product/883M) and [![VDS](https://img.shields.io/badge/VDS-Vibration_System-FF6F61?style=flat)](https://www.vds.com)  
 * 📡 **Edge Hardware & Sensors:** [![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat&logo=espressif&logoColor=white)](), [![ESP32-C3](https://img.shields.io/badge/ESP32-C3%2FS3-E7352C?style=flat&logo=espressif&logoColor=white)](), [![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi-C51A4A?style=flat&logo=raspberry-pi&logoColor=white)](), [![LoRa](https://img.shields.io/badge/LoRa-0091BD?style=flat&logo=lora&logoColor=white)](), [![BLE](https://img.shields.io/badge/BLE-0082FC?style=flat&logo=bluetooth&logoColor=white)](), [![Wilcoxon 883M](https://img.shields.io/badge/Wilcoxon_883M-Sensor-4ABDAC?style=flat)](https://www.wilcoxon.com/product/883M), [![VDS](https://img.shields.io/badge/VDS-Vibration_System-FF6F61?style=flat)](https://www.vds.com) 
 
+#### 🔌 ForgeModbus: Modbus TCP Library for ESP32
+An Arduino library that turns any ESP32 into a Modbus TCP server over Wi-Fi or Ethernet. Available in the **Arduino Library Manager**.
+
+* All four Modbus tables, with function codes 01–06, 15 and 16
+* Read/write hooks, read-only ranges, and float helpers in all four word orders
+* Settings saved to flash, IP allowlist, configurable timeouts and automatic network recovery
+* Runs on ESP32, S2, S3, C3, C5, C6 and P4; CI builds every chip on each push
+
+[**View project**](https://github.com/dineshpalsingh1989/ForgeModbus) | [**Examples**](https://github.com/dineshpalsingh1989/ForgeModbus/tree/main/examples)
+
+![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
+![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat&logo=espressif&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00878F?style=flat&logo=arduino&logoColor=white)
+![MIT License](https://img.shields.io/badge/License-MIT-green?style=flat)
 
 ---
 
