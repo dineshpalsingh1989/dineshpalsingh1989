@@ -57,6 +57,25 @@ A local-first speed-enforcement dashboard for the **Cytron IRIV PiControl CM5** 
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
 *(Private repository, contact me for a demo.)*
 
+#### 🔍 Depth Inspection Station (IRIV EdgeAI CM5 + Orbbec Gemini 336 + Hailo AI HAT+)
+A 3D vision station that runs on the **Cytron IRIV EdgeAI CM5**. It uses an **Orbbec Gemini 336** depth camera and a **Hailo-8L AI HAT+**. One web dashboard runs three apps:
+
+* **Surface inspection:** compares each part with a clean reference part to find dents, bumps, holes and dust, then gives PASS / FAIL. It can check every frame live or once per part on a trigger (dashboard, IRIV User button or DI0). A failed part switches on the DO0 reject output and a buzzer.
+* **Logistics (boxes & bags):** measures length, width and height of items on a table with depth, and recognises bags with AI. It counts the items in view and the ones placed this session.
+* **Safety & people:** warns when something enters a danger zone. A pose model on the AI HAT draws each person's skeleton, follows them with an ID and a movement trail, and shows their distance and walking speed.
+* **Teach & train:** capture and label real examples in the browser, export a YOLO dataset with a Colab notebook, and compile it for the Hailo HAT.
+* **Station tools:** a history of results with pictures, camera presets, and live CPU, temperature and RAM. It runs as a systemd service and has 100 unit tests.
+
+![Depth Inspection Station: live colour, deviation and depth views with a PASS / FAIL verdict](images/depth-inspection-station.jpg)
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white)
+![Hailo](https://img.shields.io/badge/Hailo-AI_HAT+-1A73E8?style=flat)
+![Orbbec](https://img.shields.io/badge/Orbbec-Gemini_336-00A3E0?style=flat)
+![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi-CM5-C51A4A?style=flat&logo=raspberry-pi&logoColor=white)
+*(Private repository, contact me for a demo.)*
+
 #### 📈 Open-Source Vibration Monitoring Projects
 | Project | What it does |
 | :--- | :--- |
