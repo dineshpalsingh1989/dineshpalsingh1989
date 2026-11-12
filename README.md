@@ -13,6 +13,30 @@ I design and deploy end-to-end **Industrial IoT (IIoT)** systems specifically fo
 
 ### 🚀 What I'm Building Now
 
+<!-- current-883m-project -->
+#### 883M RS485 to MQTT — current focus
+
+<a href="https://dineshpalsingh1989.github.io/demodashboard/short-video-of-iriv-ioc-vibration/"><img src="images/883m-rs485-to-mqtt-logo.png" alt="883M RS485 to MQTT project logo" width="200"></a>
+
+I’m working on the **Wilcoxon 883M gateway and its interactive learning experience**: sensor measurements over RS485/Modbus RTU, an IRIV IO Controller, MQTT data and a latched alarm workflow.
+
+- **Gateway firmware:** 883M readings for browser dashboards, MQTT and Modbus TCP on supported boards.
+- **Interactive walkthrough:** a narrated three-minute factory film with a motor/pump cutaway, sensor close-up labels, realistic cabling and a complete alarm event.
+- **Hands-on learning:** clickable hardware, selectable wiring paths, synthetic fault comparisons and guided setup.
+- **Documentation and design:** downloadable wiring guide, parts list, commissioning checklist, new project logo and improved mobile navigation.
+
+The walkthrough and example fault signals are simulated. The current custom IOC gateway reads one configured sensor ID; multi-sensor RS485 polling remains an expansion task requiring firmware changes and hardware validation.
+
+[**Gateway source**](https://github.com/dineshpalsingh1989/Wilcoxon-883M_RTU-to-TCP-and-MQTT) | [**Explore the 883M demo**](https://dineshpalsingh1989.github.io/demodashboard/short-video-of-iriv-ioc-vibration/) | [**Wiring guide (PDF)**](https://dineshpalsingh1989.github.io/demodashboard/short-video-of-iriv-ioc-vibration/wiring-guide.pdf)
+
+#### Smart City Demo Dashboard — interactive industrial showcases
+
+I’m also improving the **Smart City Demo Dashboard**: a 3D city, airport and warehouse simulation with industrial sensor demonstrations, IRIV controller tours and interactive learning pages. The latest 883M experience is part of this project.
+
+[**Live smart city**](https://dineshpalsingh1989.github.io/demodashboard/) | [**Dashboard source**](https://github.com/dineshpalsingh1989/demodashboard)
+<!-- /current-883m-project -->
+
+
 #### 📡 Milesight Dashboard V2.0
 
 A self-hosted **LoRaWAN and MQTT dashboard** for Milesight sensors and gateways, with **Firebase Firestore** storage and optional **Telegram + Gemini** sensor questions.
