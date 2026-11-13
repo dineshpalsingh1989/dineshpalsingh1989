@@ -9,9 +9,13 @@ I design and deploy end-to-end **Industrial IoT (IIoT)** systems specifically fo
 
 > *"Turning vibration into value."*
 
+![Turning vibration into value: machine and sensor, edge gateway, protocols, broker and cloud, dashboards, then alerts that reach the maintenance team](images/what-i-build.svg)
+
 ---
 
 ### 🚀 What I'm Building Now
+
+![What I'm building: the 883M gateway, the Smart City Demo Dashboard, the Milesight Dashboard, the IRIV Speed Console, the Depth Inspection Station and the ForgeModbus library](images/projects.svg)
 
 <!-- current-883m-project -->
 #### 883M RS485 to MQTT — current focus
@@ -24,6 +28,9 @@ I’m working on the **Wilcoxon 883M gateway and its interactive learning experi
 - **Interactive walkthrough:** a narrated three-minute factory film with a motor/pump cutaway, sensor close-up labels, realistic cabling and a complete alarm event.
 - **Hands-on learning:** clickable hardware, selectable wiring paths, synthetic fault comparisons and guided setup.
 - **Documentation and design:** downloadable wiring guide, parts list, commissioning checklist, new project logo and improved mobile navigation.
+- **Latest release (v4.13.0):** each whole waveform and spectrum now arrives as one MQTT message, so back ends no longer join pieces.
+
+![Wilcoxon 883M gateway: the sensor on a motor talks RS485 Modbus RTU to an IRIV IO Controller or ESP32, which feeds a web dashboard, PLCs over Modbus TCP and an MQTT broker, and drives a latched alarm light with an acknowledge button](images/883m-gateway.svg)
 
 The walkthrough and example fault signals are simulated. The current custom IOC gateway reads one configured sensor ID; multi-sensor RS485 polling remains an expansion task requiring firmware changes and hardware validation.
 
