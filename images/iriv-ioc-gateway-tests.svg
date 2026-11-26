@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="t d">
+  <title id="t">Tested on a real IRIV IOC</title>
+  <desc id="d">Bench test of 26 Nov 2026 on firmware 0.3.0: USB self-test passed, Modbus TCP 17 of 17, MQTT 1883 29 of 29, MQTT 8883 with TLS 29 of 29 with the broker checked and a wrong CA refused, sessions held without reconnects, library tests pass. Terminal output from the test scripts on the right. Still to test: real input signals, RS485 with a slave, CR2032 power cut.</desc>
+  <defs>
+    <style>
+      .ink{stroke:#1d2926;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .thin{stroke:#1d2926;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .h{font-family:'Comic Sans MS','Chalkboard SE','Comic Neue',cursive;font-weight:700;fill:#1d2926}
+      .b{font-family:'Segoe UI',Helvetica,Arial,sans-serif;fill:#34423c}
+      .k{font-family:'Segoe UI',Helvetica,Arial,sans-serif;font-weight:700;fill:#1d2926}
+      .m{font-family:Consolas,'Courier New',monospace;font-size:15px;fill:#d7e3dc}
+      .p{fill:#7fd69b}
+      .c{fill:#f4c84a}
+    </style>
+    <g id="ok"><circle r="15" fill="#3fae6a" class="thin"/><path d="M-7 0l5 5 9-10" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </defs>
+  <rect x="4" y="4" width="1192" height="552" rx="30" fill="#fbf8ef" class="ink"/>
+
+  <text x="40" y="66" class="h" font-size="34">Tested on a real IRIV IOC</text>
+  <text x="40" y="98" class="b" font-size="17">26 Nov 2026 · firmware 0.3.0 · RP2350A · scripts in firmware/tools/hardware_test</text>
+
+  <!-- results -->
+  <rect x="24" y="120" width="596" height="348" rx="18" fill="#fff" class="ink"/>
+  <g>
+    <use href="#ok" x="62" y="164"/>
+    <text x="92" y="160" class="k" font-size="19">USB self-test</text>
+    <text x="92" y="182" class="b" font-size="15">W5500 answers · RTC ok · flash mounted · 36.5 °C</text>
+    <use href="#ok" x="62" y="218"/>
+    <text x="92" y="214" class="k" font-size="19">Modbus TCP · 17/17</text>
+    <text x="92" y="236" class="b" font-size="15">every table · error replies · 4 clients at once · about 4 ms</text>
+    <use href="#ok" x="62" y="272"/>
+    <text x="92" y="268" class="k" font-size="19">MQTT 1883 · 29/29</text>
+    <text x="92" y="290" class="b" font-size="15">18 topics · DO0–DO3 via MQTT and Modbus · buzzer · counter</text>
+    <use href="#ok" x="62" y="326"/>
+    <text x="92" y="322" class="k" font-size="19">MQTT 8883 with TLS · 29/29</text>
+    <text x="92" y="344" class="b" font-size="15">broker checked against its CA · a wrong CA is refused</text>
+    <use href="#ok" x="62" y="380"/>
+    <text x="92" y="376" class="k" font-size="19">Sessions hold</text>
+    <text x="92" y="398" class="b" font-size="15">5 min on TLS, no reconnects, values every 2.0 s</text>
+    <use href="#ok" x="62" y="434"/>
+    <text x="92" y="430" class="k" font-size="19">Library tests</text>
+    <text x="92" y="452" class="b" font-size="15">IRIVModbus · IRIVIOCIo · IRIVIOCHardware, all pass</text>
+  </g>
+
+  <!-- terminal -->
+  <rect x="640" y="120" width="536" height="348" rx="18" fill="#1f2a27" class="ink"/>
+  <circle cx="668" cy="144" r="6" fill="#e8833a"/><circle cx="688" cy="144" r="6" fill="#f4c84a"/><circle cx="708" cy="144" r="6" fill="#3fae6a"/>
+  <g class="m">
+    <text x="660" y="180"><tspan class="c">$</tspan> python mbtest.py 192.168.0.206</text>
+    <text x="660" y="200"><tspan class="p">[PASS]</tspan> Model = IOC  'IOC'</text>
+    <text x="660" y="220"><tspan class="p">[PASS]</tspan> Version = 0.3.0  [0, 3, 0]</text>
+    <text x="660" y="240"><tspan class="p">[PASS]</tspan> 4 clients x 20 requests</text>
+    <text x="660" y="260" class="p">17/17 passed</text>
+    <text x="660" y="290"><tspan class="c">$</tspan> python mqtttest.py 192.168.0.206  # 8883</text>
+    <text x="660" y="310"><tspan class="p">[PASS]</tspan> IOC connected and published all 18 topics</text>
+    <text x="660" y="330"><tspan class="p">[PASS]</tspan> DO0 ON via MQTT -&gt; state + Modbus coil</text>
+    <text x="660" y="350" class="p">29/29 passed</text>
+    <text x="660" y="380"><tspan class="c">$</tspan> python usb.py COM11 STATUS</text>
+    <text x="660" y="400">"ip": "192.168.0.206", "online": true,</text>
+    <text x="660" y="420">"mqtt": {"tls": true, "brokerChecked": true,</text>
+    <text x="660" y="440">         "connected": true}</text>
+  </g>
+
+  <!-- still to test -->
+  <rect x="24" y="484" width="1152" height="56" rx="16" fill="#fff4e6" class="thin"/>
+  <text x="44" y="519" class="b" font-size="17"><tspan class="k" fill="#b4561a">Still to test on the bench:</tspan> real digital and analog signals · RS485 with a slave device · CR2032 holding the time through a power cut</text>
+</svg>

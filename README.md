@@ -15,10 +15,34 @@ I design and deploy end-to-end **Industrial IoT (IIoT)** systems specifically fo
 
 ### 🚀 What I'm Building Now
 
-![What I'm building: the 883M gateway, the Smart City Demo Dashboard, the Milesight Dashboard, the IRIV Speed Console, the Depth Inspection Station and the ForgeModbus library](images/projects.svg)
+![What I'm building: the IRIV IOC Gateway, the 883M gateway, the Smart City Demo Dashboard, DP Sensor Hub, the AI Camera, the SmartHub CM5 network setup, the IRIV Speed Console, the Depth Inspection Station and the ForgeModbus library](images/projects.svg)
+
+#### 🟢 IRIV IOC Gateway: new
+
+![Cartoon: the IRIV IO Controller reads switches, 4-20 mA sensors and RS485 meters and shares them with SCADA over Modbus TCP and with an MQTT broker](images/iriv-ioc-gateway.svg)
+
+Turns a **Cytron IRIV IO Controller** (RP2350A) into a LAN gateway: all 11 digital inputs, 4 outputs, 2 analog inputs, the buzzer and up to 64 **RS485 Modbus RTU** sensor values on **Modbus TCP** and **MQTT** at the same time.
+
+- **One-click web installer:** plug in USB-C, click Install. It checks the hardware, installs the newest firmware from GitHub and shows the IP address. It updates older firmware straight away and asks before replacing other firmware.
+- **The controller's own web page:** the full dashboard with live values at `http://<its IP>/`, Save to controller over the LAN, and updates from GitHub. Changes need a password.
+- **MQTT over TLS on 8883**, with or without a CA certificate, plus plain 1883.
+- **RS485 the easy way:** Test read a sensor first, then add it. It gets its own Modbus TCP address and MQTT topic automatically.
+- **Our own libraries:** Modbus TCP/RTU, I/O and MQTT, no third-party Modbus or MQTT code.
+
+![Tested on a real IRIV IOC: self-test, Modbus TCP 17/17, MQTT 1883 and 8883 with TLS 29/29, updates over USB and LAN, web page 16/16](images/iriv-ioc-gateway-tests.svg)
+
+Real input signals, RS485 with a real sensor and the backup battery are still to be tested on the bench.
+
+[**Web installer**](https://dineshpalsingh1989.github.io/IRIV-IOC-Gateway/) | [**Source**](https://github.com/dineshpalsingh1989/IRIV-IOC-Gateway) | [**Wiki**](https://github.com/dineshpalsingh1989/IRIV-IOC-Gateway/wiki) | [**Project board**](https://github.com/users/dineshpalsingh1989/projects/4)
+
+![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
+![RP2350](https://img.shields.io/badge/RP2350-Arduino--Pico-C51A4A?style=flat&logo=raspberry-pi&logoColor=white)
+![Modbus](https://img.shields.io/badge/Modbus-RTU%2FTCP-orange?style=flat)
+![MQTT](https://img.shields.io/badge/MQTT-TLS-3C5280?style=flat&logo=eclipse-mosquitto&logoColor=white)
+![MIT License](https://img.shields.io/badge/License-MIT-green?style=flat)
 
 <!-- current-883m-project -->
-#### 883M RS485 to MQTT — current focus
+#### 883M RS485 to MQTT
 
 <a href="https://dineshpalsingh1989.github.io/demodashboard/short-video-of-iriv-ioc-vibration/"><img src="images/883m-rs485-to-mqtt-logo.png" alt="883M RS485 to MQTT project logo" width="200"></a>
 
@@ -44,34 +68,39 @@ I’m also improving the **Smart City Demo Dashboard**: a 3D city, airport and w
 <!-- /current-883m-project -->
 
 
-#### 📡 Milesight Dashboard V2.0
+#### 📡 DP Sensor Hub v2.2 (Milesight LoRaWAN)
 
-A self-hosted **LoRaWAN and MQTT dashboard** for Milesight sensors and gateways, with **Firebase Firestore** storage and optional **Telegram + Gemini** sensor questions.
+A self-hosted **MQTT broker and live dashboard for Milesight gateways and sensors**. Point the gateway at it and every sensor appears by itself: live values, charts, power and energy, Telegram alerts and remote commands. Data stays on your own server (DuckDB) or in the cloud (Firebase). One-command Docker install.
 
-- **Live monitoring:** device cards, history charts, CSV export, storage usage, and a workspace debug stream.
-- **Expanded sensor coverage:** 24 named device profiles, including 17 additions for leak detection, pulse metering, tank distance, water level, soil, pipe pressure, current, visitor counting, temperature, tilt, and weather. New profiles use gateway-decoded JSON.
-- **Two-way MQTT:** readings flow from sensors to the dashboard; owners can publish commands through the gateway's Embedded Network Server.
-- **Device controls:** hexadecimal/Base64 command previews, configurable workspace topics, FPort and confirmation options, UC300 DO1/DO2 presets, and command history. MQTT publication does not confirm sensor execution.
-- **Local demo:** 24 sample devices with charts, CSV downloads, settings, and simulated commands. No Firebase credentials or gateway needed.
-- **Deployment:** Docker or Node.js, workspace access controls, protected Firebase setup, and GitHub Actions checks.
+- **Telegram alerts:** leaks, low batteries, devices that stop reporting and readings outside your limits, plus a "back to normal" message.
+- **Charts:** alert limit lines, 30-day history with hourly low-to-high bands, up to four lines compared, drag to zoom.
+- **Energy:** kWh per day and cost from your tariff, live load and three-phase imbalance.
+- **Weekly pattern** heatmap, rooms and search, and a full-screen **wall display**.
 
-[**View project**](https://github.com/dineshpalsingh1989/milesight-dashboard) | [**Setup & sensor list**](https://github.com/dineshpalsingh1989/milesight-dashboard#readme) | [**Latest updates**](https://github.com/dineshpalsingh1989/milesight-dashboard/blob/main/CHANGELOG.md)
+[**Live demo**](https://dineshpalsingh1989.github.io/gateway-dashboard/) | [**Source**](https://github.com/dineshpalsingh1989/gateway-dashboard) | [**Releases**](https://github.com/dineshpalsingh1989/gateway-dashboard/releases)
 
-![Milesight Dashboard architecture: sensor readings and MQTT commands](https://raw.githubusercontent.com/dineshpalsingh1989/milesight-dashboard/main/docs/architecture.svg)
-
-Try the demo after cloning the project and installing dependencies:
-
-```sh
-npm ci
-npm run demo
-```
-
-Open **http://localhost:8081**. Demo data and commands are simulated; physical gateway and sensor delivery remain unverified.
+![DP Sensor Hub architecture: sensor readings and MQTT commands](https://raw.githubusercontent.com/dineshpalsingh1989/gateway-dashboard/main/docs/architecture.svg)
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
 ![MQTT](https://img.shields.io/badge/MQTT-3C5280?style=flat&logo=eclipse-mosquitto&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+
+#### 📷 AI Camera
+
+A self-hosted **AI CCTV dashboard** for Raspberry Pi 5 / CM5 with a **Hailo-8 / 8L** AI chip (runs on the Cytron IRIV EdgeAI CM5; falls back to CPU on any PC): live cameras, object detection and tracking, zones, line counting, pose and fall detection, face blur, heatmaps, alerts with photos and clips, Telegram, and quality inspection. Labelling and training run locally on the device.
+
+![AI Camera live overview: camera grid, KPI tiles and recent activity](https://raw.githubusercontent.com/dineshpalsingh1989/ai-camera/main/docs/live-overview.png)
+
+[**Source**](https://github.com/dineshpalsingh1989/ai-camera)
+
+#### 📶 SmartHub CM5 Network Dashboard
+
+Set up the network of an **IRIV SmartHub CM5** with just a phone: hold the USER button, it starts its own WiFi hotspot, open a web page and choose Ethernet or WiFi settings. No keyboard, screen or app. Built to stay running: about 0.03 % of one CPU core when idle.
+
+![SmartHub Network Dashboard](https://raw.githubusercontent.com/dineshpalsingh1989/smarthub-cm5-dashboard/main/docs/banner.svg)
+
+[**Source and download**](https://github.com/dineshpalsingh1989/smarthub-cm5-dashboard)
 
 #### 🚦 IRIV Speed Console (Sensata AI Speed)
 A local-first speed-enforcement dashboard for the **Cytron IRIV PiControl CM5** and **Milesight TS4466 / TS8266** LPR cameras.
@@ -113,6 +142,9 @@ A 3D vision station that runs on the **Cytron IRIV EdgeAI CM5**. It uses an **Or
 | [Wilcoxon-883M RTU to TCP and MQTT](https://github.com/dineshpalsingh1989/Wilcoxon-883M_RTU-to-TCP-and-MQTT) | ESP32 (C++) firmware bridging Wilcoxon 883M Modbus RTU sensors to Modbus TCP and MQTT |
 | [Wilcoxon-ILA200-DashboardESP32](https://github.com/dineshpalsingh1989/Wilcoxon-ILA200-DashboardESP32) | ESP32 firmware with edge FFT analysis, Modbus TCP and MQTT for the Wilcoxon ILA200 |
 | [Wilcoxon-VDS](https://github.com/dineshpalsingh1989/Wilcoxon-VDS) | Real-time vibration dashboard using Python Dash, MQTT, OPC and SQLite |
+| [ILA210 and 883M Library](https://github.com/dineshpalsingh1989/ILA210-and-883M-Library) | Firmware downloads and Arduino/PlatformIO libraries for Wilcoxon sensor gateways on the IRIV IO Controller |
+| [Wilcoxon883MRTU](https://github.com/dineshpalsingh1989/Wilcoxon883MRTU) | Arduino library: Wilcoxon 883M over RS485 Modbus RTU, with an optional Modbus TCP server for PLCs |
+| [IRIV IOC Gateway](https://github.com/dineshpalsingh1989/IRIV-IOC-Gateway) | Every pin and RS485 sensor of the IRIV IO Controller on Modbus TCP and MQTT, with a one-click web installer |
 
 ---
 
